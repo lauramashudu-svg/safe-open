@@ -1,0 +1,1 @@
+#Inspects PDF metadata, JavaScript indicators and suspicious actions.

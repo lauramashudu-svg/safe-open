@@ -1,0 +1,1 @@
+#Checks file signatures, extensions, sizes and suspicious characteristics.

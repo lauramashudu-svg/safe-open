@@ -1,0 +1,1 @@
+#Examines Office documents for macros, embedded objects and other risk indicators.
