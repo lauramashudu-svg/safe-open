@@ -1,16 +1,18 @@
-
-# Python cache files
+#Python cache files
 __pycache__/
 *.py[cod]
 
-# Virtual environments
+#Virtual environments
 .venv/
 venv/
 
-# Test and coverage files
+#Test and coverage files
 .pytest_cache/
 .coverage
 htmlcov/
 
-# Environment variables and secrets
+#Environment variables and secrets
 .env
+
+#Generated scan reports
+reports/
