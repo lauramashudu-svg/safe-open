@@ -46,7 +46,6 @@ Legacy Office formats receive limited analysis because their structure differs f
 - `src/analysers/pdf.py` — searches PDF content for known suspicious indicators.
 - `src/analysers/office.py` — inspects supported Office containers for macros, embedded objects, and external relationships.
 - `src/analysers/archive.py` — checks ZIP archives for suspicious paths, file types, nested archives, encryption, and unusual compression ratios.
-- `src/analysers/reputation.py` — reserved for reputation-related functionality; implementation and integration must be verified before this is considered a completed feature.
 - `src/scoring.py` — calculates risk scores and assigns risk levels.
 - `src/report.py` — builds, formats, and saves scan reports.
 - `tests/` — contains automated tests for individual components and integration.

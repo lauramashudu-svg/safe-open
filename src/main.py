@@ -2,13 +2,15 @@
 
 from pathlib import Path
 
+from rich import print as rich_print
+
 from src.intake import inspect_file
 from src.analysers.generic import check_file_signature
 from src.analysers.pdf import analyze_pdf
 from src.analysers.office import analyze_office
 from src.analysers.archive import analyze_archive
 from src.scoring import calculate_risk
-from src.report import create_report, format_report, save_json_report
+from src.report import create_report, display_banner, display_report, save_json_report
 
  #Extensions handled by the Office analyser.
 OFFICE_EXTENSIONS = {
@@ -55,10 +57,7 @@ def scan_file(file_path):
 def main():
     """Run Safe-Open from the terminal."""
 
-    print("=" * 40)
-    print("             SAFE-OPEN")
-    print("      Static File Security Scanner")
-    print("=" * 40)
+    display_banner()
 
     file_path = input("Enter the path of the file to scan: ").strip()
     file_path = file_path.strip('"')
@@ -68,8 +67,7 @@ def main():
         report = scan_file(file_path)
 
         # Display the readable report.
-        print()
-        print(format_report(report))
+        display_report(report)
 
         # Save a JSON report in the reports folder.
         reports_folder = Path("reports")
@@ -82,11 +80,20 @@ def main():
 
         save_json_report(report, output_path)
 
-        print(f"\nJSON report saved to: {output_path}")
-        print("\nScan completed. This is not a guarantee that the file is safe.")
+        
+        rich_print(
+            f"\n[bold hot_pink]♥ JSON report saved to:[/bold hot_pink] "
+            f"[white]{output_path}[/white]"
+        )
+
+        rich_print(
+            "\n[bold green]✓ Scan completed.[/bold green] "
+            "[yellow]This does not guarantee that the file is safe.[/yellow]"
+        )
+
 
     except (OSError, ValueError) as error:
-        print(f"\nScan could not be completed: {error}")
+        rich_print(f"[bold red]✗ Scan could not be completed: {error}[/bold red]")
 
 
 if __name__ == "__main__":

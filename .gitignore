@@ -5,6 +5,7 @@ __pycache__/
 #Virtual environments
 .venv/
 .venv-1/
+.venv-2/
 venv/
 
 #Test and coverage files
