@@ -1,3 +1,5 @@
+WTC-8JY45UQW
+
 # Safe-Open
 
 **A Python-based static file security scanner for PDFs, Microsoft Office documents, and ZIP archives.**
