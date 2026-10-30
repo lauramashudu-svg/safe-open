@@ -6,6 +6,12 @@ Safe-Open analyses files for potentially suspicious characteristics before users
 
 **Important:** Safe-Open performs static analysis only. It does not guarantee that a file is safe or confirm that a file contains malware.
 
+## Project Demonstration
+
+Watch the Safe-Open demonstration video:
+
+[Watch the Safe-Open Demo on YouTube](https://youtu.be/2zFQTtttvx8)
+
 ## Features
 
 - **File validation:** Checks file existence, supported extensions, empty files, and file-size limits.
